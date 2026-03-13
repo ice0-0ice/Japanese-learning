@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五十音道場 - 日语假名学习</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="nav-brand">
+            <span class="brand-icon">⛩️</span>
+            <span class="brand-text">五十音道場</span>
+        </div>
+        <div class="nav-stats" id="navStats">
+            <div class="nav-stat" title="连续打卡">
+                <span class="stat-icon">🔥</span>
+                <span class="stat-value" id="navStreak">0</span>
+            </div>
+            <div class="nav-stat" title="总课程数">
+                <span class="stat-icon">📚</span>
+                <span class="stat-value" id="navLessons">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="mainContent">
+        <!-- Dynamic content rendered by JS -->
+    </main>
+
+    <!-- Bottom Tab Bar -->
+    <nav class="bottom-nav">
+        <button class="tab-btn active" data-view="home" onclick="router.navigate('home')">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M3 13h1v7c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-7h1a1 1 0 00.7-1.7l-9-9a1 1 0 00-1.4 0l-9 9A1 1 0 003 13z" fill="currentColor"/></svg>
+            <span>首页</span>
+        </button>
+        <button class="tab-btn" data-view="chart" onclick="router.navigate('chart')">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M3 3v18h18V3H3zm16 16H5V5h14v14zM7 7h2v2H7V7zm0 4h2v2H7v-2zm0 4h2v2H7v-2zm4-8h6v2h-6V7zm0 4h6v2h-6v-2zm0 4h6v2h-6v-2z" fill="currentColor"/></svg>
+            <span>图表</span>
+        </button>
+        <button class="tab-btn lesson-btn" data-view="lesson" onclick="router.navigate('lesson')">
+            <svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/></svg>
+            <span>学习</span>
+        </button>
+        <button class="tab-btn" data-view="errors" onclick="router.navigate('errors')">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/></svg>
+            <span>错题</span>
+        </button>
+        <button class="tab-btn" data-view="rank" onclick="router.navigate('rank')">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M7.5 21H2V9h5.5v12zm7.25-18h-5.5v18h5.5V3zM22 11h-5.5v10H22V11z" fill="currentColor"/></svg>
+            <span>排行</span>
+        </button>
+    </nav>
+
+    <!-- Audio element for TTS fallback -->
+    <audio id="ttsAudio" preload="none"></audio>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
