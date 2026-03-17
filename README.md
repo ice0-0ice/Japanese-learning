@@ -37,3 +37,4 @@ python app.py
 ```
 
 访问 http://localhost:5000
+![vibecoding- Japanese leaning](https://github.com/user-attachments/assets/71fd5a1a-ee6d-4c73-b44c-f810c8dee957)
